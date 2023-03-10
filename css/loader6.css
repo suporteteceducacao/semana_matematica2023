@@ -1,0 +1,60 @@
+body {
+  overflow: hidden; 
+}
+ 
+/* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F27620; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.loader{
+    width: 120px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+ }
+
+ .loader span{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: auto;
+ }
+.ball{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: bounce .5s alternate infinite;
+}
+
+.ball:nth-child(2){
+    animation-delay: .16s;
+}
+
+.ball:nth-child(3){
+    animation-delay: .32s;
+}
+
+@keyframes bounce{
+    from{
+        transform: scaleX(1.25);
+    }
+    to{
+        transform: translateY(-50px) scaleX(1);
+    }
+}

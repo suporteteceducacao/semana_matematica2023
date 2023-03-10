@@ -1,0 +1,38 @@
+
+body {
+  overflow: hidden; 
+}
+ 
+/* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#F27620; /* cor do background que vai ocupar o body */
+    z-index:999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+@keyframes spin{
+ to{
+  transform: rotate(360deg);}
+}
+
+.loader{
+width:  64px;
+height: 64px;
+border-radius: 50%;
+
+border-top: 8px solid rgba(255, 255, 255, 1);
+border-left: 8px solid rgba(255, 255, 255, 1);
+border-right: 8px solid rgba(255, 255, 255, 0);
+animation: spin 0.575s infinite linear;
+}
